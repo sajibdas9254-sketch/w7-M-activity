@@ -54,7 +54,7 @@ const updateBook = async (req, res) => {
     const book = await Book.findOneAndUpdate(
       { _id: bookId },
       { ...req.body },
-      { new: true }
+      { returnDocument: 'after' } 
     );
     if (!book) {
       return res.status(404).json({ message: "Book not found" });
@@ -92,3 +92,4 @@ module.exports = {
   updateBook,
   deleteBook,
 };
+

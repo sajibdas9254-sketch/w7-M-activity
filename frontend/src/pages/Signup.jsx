@@ -48,3 +48,4 @@ const Signup = ({ setIsAuthenticated }) => {
 };
 
 export default Signup;
+

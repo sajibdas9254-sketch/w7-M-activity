@@ -17,3 +17,4 @@ const BookListings = ({ books }) => {
 };
 
 export default BookListings;
+
