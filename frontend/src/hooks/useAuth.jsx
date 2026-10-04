@@ -1,12 +1,10 @@
 import { useState } from "react";
 
-
-export default function useLogin(url) {
+export default function useAuth(url) {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  
 
-  const login = async (credentials) => {
+  const authenticate = async (credentials) => {
     setIsLoading(true);
     setError(null);
 
@@ -33,5 +31,5 @@ export default function useLogin(url) {
     }
   };
 
-  return { login, isLoading, error };
+  return { authenticate, isLoading, error };
 }
